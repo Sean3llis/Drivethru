@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+foodTruck = Category.create(name: "Food Truck")
+foodStand = Category.create(name: "Food Stand")
+
+mofo = Vendor.create(name: "Mofongo")
+	mofo.dishes.create(name: "Chicken Mofongo")
+	mofo.dishes.create(name: "Pork Mofongo")
+	mofo.category = foodTruck
+
+carnal = Vendor.create(name: "Carnal")
+	carnal.dishes.create(name: "Ribs")
+	carnal.dishes.create(name: "Pork Shoulder")
+	carnal.dishes.create(name: "Sirloin")
+	carnal.category = foodStand

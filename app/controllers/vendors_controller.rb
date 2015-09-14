@@ -10,6 +10,7 @@ class VendorsController < ApplicationController
   # GET /vendors/1
   # GET /vendors/1.json
   def show
+
   end
 
   # GET /vendors/new
@@ -65,6 +66,7 @@ class VendorsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_vendor
       @vendor = Vendor.find(params[:id])
+      @dishes = @vendor.dishes
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

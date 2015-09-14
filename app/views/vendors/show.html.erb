@@ -10,5 +10,14 @@
   <%= @vendor.bio %>
 </p>
 
+<p>
+  <strong>Menu:</strong>
+  <ul>
+  <% @dishes.each do |dish| %>
+  	<li><%= dish.name %></li>
+  <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_vendor_path(@vendor) %> |
 <%= link_to 'Back', vendors_path %>
