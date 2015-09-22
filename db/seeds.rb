@@ -16,15 +16,18 @@ mofo = Vendor.create(name: "Mofongo")
 	mofo.category = foodTruck
 	mofo.events.create(
 		title: "Event 1",
-		start: Time.now.utc.iso8601
+		start: Time.now.utc.iso8601,
+		end: Time.now.utc.iso8601
 		)
 	mofo.events.create(
 		title: "Event 2",
-		start: 
+		start: "2015-09-20 23:48:46 UTC".to_time.iso8601,
+		end: "2015-09-21 23:48:46 UTC".to_time.iso8601
 		)
 	mofo.events.create(
 		title: "Event 3",
-		start: 
+		start: "2015-09-18 23:48:46 UTC".to_time.iso8601,
+		end: "2015-09-19 23:48:46 UTC".to_time.iso8601
 		)
 
 carnal = Vendor.create(name: "Carnal")
