@@ -5,4 +5,8 @@ class Vendor < ActiveRecord::Base
 	accepts_nested_attributes_for :dishes,
 	 	reject_if: lambda { |attr| attr[:name].blank? },
 	 	:allow_destroy => true
+
+	accepts_nested_attributes_for :events,
+	 	reject_if: lambda { |attr| attr[:start].blank? || attr[:title].blank? },
+	 	:allow_destroy => true
 end

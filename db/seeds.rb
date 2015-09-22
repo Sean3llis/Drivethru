@@ -13,6 +13,9 @@ foodStand = Category.create(name: "Food Stand")
 mofo = Vendor.create(name: "Mofongo")
 	mofo.dishes.create(name: "Chicken Mofongo")
 	mofo.dishes.create(name: "Pork Mofongo")
+	mofo.dishes.each do |dish|
+		dish.pic
+	end
 	mofo.category = foodTruck
 	mofo.events.create(
 		title: "Event 1",

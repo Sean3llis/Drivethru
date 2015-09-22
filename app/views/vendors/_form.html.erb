@@ -20,17 +20,24 @@
     <%= f.text_area :bio %>
   </div>
   <div class="field">
+
   <h4>Dishes</h4>
     <%= f.fields_for :dishes do |builder| %>
-      <p class="field-group">
         <%= render 'dish_fields', f: builder %>
-      </p>
     <% end %>
     <div class="links">
       <%= link_to_add_association "Add Dish", f, :dishes %>
     </div>
   </div>
+
+  <h4>Events</h4>
+    <%= f.fields_for :events do |builder| %>
+        <%= render 'event_fields', f: builder %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association "Add Event", f, :events %>
+    </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit data: {no_turbolink: "true"} %>
   </div>
 <% end %>

@@ -1,0 +1,6 @@
+<div class="events-fields field-group">
+	<%= f.text_field :title %>
+	Start: <%= f.datetime_local_field :start %>
+	End: <%= f.datetime_local_field :end %>
+	<%= link_to_remove_association "Remove Event", f %><br/>
+</div>

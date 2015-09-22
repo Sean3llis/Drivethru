@@ -68,15 +68,40 @@ class VendorsController < ApplicationController
     # redirect_to vendors_url
   end
 
+  def delete_pic
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vendor
       @vendor = Vendor.find(params[:id])
       @dishes = @vendor.dishes
+      @events = @vendor.events
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
-      params.require(:vendor).permit(:name, :bio, dishes_attributes: [:id, :name, :pic, :_destroy])
+      params.require(:vendor).permit(
+        :name,
+        :bio,
+        dishes_attributes: [
+          :id,
+          :name,
+          :pic,
+          :_destroy
+        ],
+        events_attributes: [
+          :id,
+          :title,
+          :start,
+          :end,
+          :_destroy
+        ],
+        pics_attributes: [
+          :id,
+          :_destroy
+        ]
+      )
     end
 end
