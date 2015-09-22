@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'time'
 
 foodTruck = Category.create(name: "Food Truck")
 foodStand = Category.create(name: "Food Stand")
@@ -13,6 +14,18 @@ mofo = Vendor.create(name: "Mofongo")
 	mofo.dishes.create(name: "Chicken Mofongo")
 	mofo.dishes.create(name: "Pork Mofongo")
 	mofo.category = foodTruck
+	mofo.events.create(
+		title: "Event 1",
+		start: Time.now.utc.iso8601
+		)
+	mofo.events.create(
+		title: "Event 2",
+		start: 
+		)
+	mofo.events.create(
+		title: "Event 3",
+		start: 
+		)
 
 carnal = Vendor.create(name: "Carnal")
 	carnal.dishes.create(name: "Ribs")
@@ -24,3 +37,4 @@ llama = Vendor.create(name: "Bolivian Llama Party")
 	llama.dishes.create(name: "Sliders")
 	llama.dishes.create(name: "Brisket")
 	llama.category = foodStand
+

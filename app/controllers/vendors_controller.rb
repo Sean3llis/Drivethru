@@ -63,8 +63,9 @@ class VendorsController < ApplicationController
   end
 
   def events
-    
-    redirect_to vendors_url
+    @vendor = Vendor.find(params[:id])
+    render json: @vendor.events
+    # redirect_to vendors_url
   end
 
   private

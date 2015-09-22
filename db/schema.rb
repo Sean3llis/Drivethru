@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921224838) do
+ActiveRecord::Schema.define(version: 20150922023902) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 20150921224838) do
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "vendor_id"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "vendors", force: :cascade do |t|

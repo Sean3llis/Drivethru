@@ -6,13 +6,7 @@
 
 	function initCal(cal) {
 		cal.fullCalendar({
-			events: [
-				{
-					id: 1,
-					title: "Event 1",
-					start: '2015-09-20'
-				}
-			]
+			events: '/vendors/1/events'
 		});
 	}
 })})(jQuery)
