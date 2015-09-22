@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="contain">
-<%= yield %>
-</div>
+	<div id="nav">
+		<div class="contain">
+			<ul class="nav-ul list-inline">
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li class="logo">
+					<a href="/">
+						<i class="fa fa-car"></i>
+					</a>
+				</li>
+				<li><a href="/vendors">Vendors</a></li>
+				<li><a href="/venues">Venues</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="page-wrapper">
+		<%= yield %>
+	</div>
+	<footer>
+		<div class="contain">
+			<div class="col-sm-12">
+				&copy; <?php echo date("Y"); ?> | DriveThru
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

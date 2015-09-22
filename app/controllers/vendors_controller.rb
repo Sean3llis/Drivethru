@@ -62,6 +62,11 @@ class VendorsController < ApplicationController
     end
   end
 
+  def events
+    
+    redirect_to vendors_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vendor
@@ -71,6 +76,6 @@ class VendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
-      params.require(:vendor).permit(:name, :bio, dishes_attributes: [:id, :name, :_destroy])
+      params.require(:vendor).permit(:name, :bio, dishes_attributes: [:id, :name, :pic, :_destroy])
     end
 end

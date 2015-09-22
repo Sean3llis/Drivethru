@@ -19,3 +19,8 @@ carnal = Vendor.create(name: "Carnal")
 	carnal.dishes.create(name: "Pork Shoulder")
 	carnal.dishes.create(name: "Sirloin")
 	carnal.category = foodStand
+llama = Vendor.create(name: "Bolivian Llama Party")
+	llama.dishes.create(name: "Sandwich")
+	llama.dishes.create(name: "Sliders")
+	llama.dishes.create(name: "Brisket")
+	llama.category = foodStand

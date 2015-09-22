@@ -1,23 +1,69 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @vendor.name %>
-</p>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @vendor.bio %>
-</p>
+<div class="row vendor-hero" id="hero">
+  <div class="contain">
+    <div class="col-sm-12">
+      <h1 class="title"><%= @vendor.name %></h1>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Menu:</strong>
-  <ul>
-  <% @dishes.each do |dish| %>
-  	<li><%= dish.name %></li>
-  <% end %>
-  </ul>
-</p>
+<div class="row" id="vendor-body">
+  <div class="contain">
 
-<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
-<%= link_to 'Back', vendors_path %>
+    <div class="col-sm-8">
+        <h3 class="title">Menu</h3>
+        <hr>
+        <div class="row">
+        <% @dishes.each do |dish| %>
+          <div class="col-sm-4">
+            <div class="panel">
+              <% if dish.pic.exists? %>
+                <%= image_tag dish.pic.url, class: "menu-img" %>
+              <% end %>
+              <div class="menu-item">
+                <%= dish.name %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="panel">
+        <h3 class="title">Bio</h3>
+        <hr>
+        <div class="bio">
+          <%= @vendor.bio %>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+
+<div class="row" id="vendor-cal">
+  <div class="contain">
+    <div class="col-sm-12">
+      <div id="cal"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="vendor-links">
+  <div class="contain">
+    <div class="col-sm-12">
+      <%= link_to 'Edit', edit_vendor_path(@vendor) %> |
+      <%= link_to 'Back', vendors_path %>
+    </div>
+  </div>
+</div>
+
+

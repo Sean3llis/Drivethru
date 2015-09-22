@@ -1,0 +1,31 @@
+// Place all the styles related to the vendors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.vendor-hero {
+	background-color: $primary;
+	color: $c-w;
+	text-align: center;
+	padding: 160px 0px;
+	.title {
+		margin: 0px;
+	}
+}
+
+#vendor-body {
+	padding-top: 40px;
+	.menu-img {
+	}
+	.title {
+		text-align: center;
+	}
+}
+
+#vendor-cal {
+	background-color: $primary;
+	color: $c-w;
+	padding: 20px 0px;
+}
+
+#vendor-links {
+	background-color: $c-gray1;
+}

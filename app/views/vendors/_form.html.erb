@@ -20,7 +20,7 @@
     <%= f.text_area :bio %>
   </div>
   <div class="field">
-  <h4>tasks</h4>
+  <h4>Dishes</h4>
     <%= f.fields_for :dishes do |builder| %>
       <p class="field-group">
         <%= render 'dish_fields', f: builder %>

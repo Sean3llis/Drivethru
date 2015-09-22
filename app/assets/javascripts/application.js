@@ -16,3 +16,5 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require cocoon
+//= require moment.min
+//= require calendar.min

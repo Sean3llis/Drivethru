@@ -12,10 +12,38 @@
  *
  */
 
+// Vendor
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+@import "calendar";
+
+// Layouts
+@import "variables";
+@import "mixins";
+@import "nav";
+@import "footer";
+
+// Models
+@import "vendors";
+
+body {
+	background-color: $body;
+}
 
 .contain {
 	max-width: 1200px;
 	margin: 0px auto;
+}
+
+.row {
+	margin: 0px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.panel {
+	padding: 15px;
 }
