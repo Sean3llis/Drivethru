@@ -1,15 +1,13 @@
-<div class="dishes-fields field-group">
-	<%= f.text_field :name %>
-	<%= link_to_remove_association "Remove Dish", f %><br/>
+<div class="nested-fields">
+	<div class="field">
+		<%= f.label :name %><br/>
+		<%= f.text_field :name %>
+	</div>
 	<div class="menu-pic field-group">
-		<%= f.fields_for :pic do |pic| %>
-			<%= render partial: 'pic_fields', locals: { pic: f.object.pic, picbuilder: pic }  %>
+		<%= f.fields_for :menu_pic, f.object.menu_pic || MenuPic.new do |menu_pic| %>
+
+			<%= render 'pic_fields', f: menu_pic  %>
 		<% end %>
 	</div>
+	<%= link_to_remove_association "Remove Dish", f %><br/>
 </div>
-
-
-
-
-
-

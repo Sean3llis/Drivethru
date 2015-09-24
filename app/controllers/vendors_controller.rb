@@ -41,6 +41,7 @@ class VendorsController < ApplicationController
   # PATCH/PUT /vendors/1
   # PATCH/PUT /vendors/1.json
   def update
+    # byebug
     respond_to do |format|
       if @vendor.update(vendor_params)
         format.html { redirect_to @vendor, notice: 'Vendor was successfully updated.' }
@@ -89,17 +90,18 @@ class VendorsController < ApplicationController
           :id,
           :name,
           :pic,
-          :_destroy
+          :_destroy,
+          menu_pic_attributes: [
+            :id,
+            :pic,
+            :_destroy
+          ]
         ],
         events_attributes: [
           :id,
           :title,
           :start,
           :end,
-          :_destroy
-        ],
-        pics_attributes: [
-          :id,
           :_destroy
         ]
       )

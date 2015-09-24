@@ -21,8 +21,8 @@
         <% @dishes.each do |dish| %>
           <div class="col-sm-4">
             <div class="panel">
-              <% if dish.pic.exists? %>
-                <%= image_tag dish.pic.url, class: "menu-img" %>
+              <% if dish.menu_pic %>
+                <%= image_tag dish.menu_pic.pic.url, class: "menu-img" %>
               <% end %>
               <div class="menu-item">
                 <%= dish.name %>
