@@ -26,9 +26,14 @@
 
 // Models
 @import "vendors";
+@import "dishes";
+@import "users";
+
+// Modules
+@import "hero";
 
 body {
-	background-color: $body;
+	background-color: $lightgray;
 }
 
 .contain {

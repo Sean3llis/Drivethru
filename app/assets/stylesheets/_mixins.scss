@@ -3,3 +3,8 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin medium-title {
+	font-size: 20px;
+	letter-spacing: 1px;
+}

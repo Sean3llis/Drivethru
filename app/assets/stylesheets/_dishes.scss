@@ -1,0 +1,21 @@
+table.vendor-menu {
+	thead {
+		td {
+			text-align: center;
+		}
+	}
+	tbody {
+		tr {
+			background-color: $w;
+			.pic-cell {
+				width: 120px;
+				border-left: 2px solid $primary;
+			}
+		}
+		td {
+			vertical-align: middle;
+			@include medium-title;
+			border-top: 10px solid $lightgray;
+		}
+	}
+}

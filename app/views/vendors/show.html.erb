@@ -15,32 +15,23 @@
   <div class="contain">
 
     <div class="col-sm-8">
-        <h3 class="title">Menu</h3>
-        <hr>
         <div class="row">
-        <% @dishes.each do |dish| %>
-          <div class="col-sm-4">
-            <div class="panel">
-              <% if dish.menu_pic %>
-                <%= image_tag dish.menu_pic.pic.url, class: "menu-img" %>
-              <% end %>
-              <div class="menu-item">
-                <%= dish.name %>
-              </div>
-            </div>
+          <div class="col-sm-12">
+            <table class="table vendor-menu">
+              <thead>
+              </thead>
+              <tbody>
+                <%= render @dishes %>
+              </tbody>
+            </table>
           </div>
-          <% end %>
         </div>
         <div class="clearfix"></div>
     </div>
 
     <div class="col-sm-4">
       <div class="panel">
-        <h3 class="title">Bio</h3>
-        <hr>
-        <div class="bio">
-          <%= @vendor.bio %>
-        </div>
+        <div id="cal"></div>
       </div>
     </div>
 
@@ -52,7 +43,7 @@
 <div class="row" id="vendor-cal">
   <div class="contain">
     <div class="col-sm-12">
-      <div id="cal"></div>
+      
     </div>
   </div>
 </div>

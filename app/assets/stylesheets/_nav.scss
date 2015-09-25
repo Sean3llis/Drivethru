@@ -12,12 +12,12 @@
 			padding: 0px 20px;
 			vertical-align: middle;
 			a {
-				color: $c-w;
+				color: $w;
 			}
 		}
 		&:after {
 			content: '';
-			background-color: $c-w;
+			background-color: $w;
 			position: absolute;
 			bottom: -10px;
 			left: 0px;

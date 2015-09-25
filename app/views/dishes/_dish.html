@@ -1,0 +1,12 @@
+<tr>
+  <td class="pic-cell">
+    <% if dish.menu_pic %>
+      <%= image_tag dish.menu_pic.pic.url, class: "menu-img" %>
+    <% end %>
+  </td>
+  <td>
+    <div class="menu-item">
+      <%= dish.name %>
+    </div>
+  </td>
+</tr>

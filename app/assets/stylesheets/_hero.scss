@@ -1,0 +1,7 @@
+#hero {
+	height: $hero-height;
+	.hero-inner {
+		@include vertical-align;
+		text-align: center;
+	}
+}
