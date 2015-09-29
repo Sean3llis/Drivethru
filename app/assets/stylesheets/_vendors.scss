@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .vendor-hero {
-	background-color: $primary;
+	@include linear-gradient(180deg, $primary, darken($primary, 5%));
 	color: $w;
 	text-align: center;
 	padding: 160px 0px;
@@ -18,12 +18,6 @@
 	.title {
 		text-align: center;
 	}
-}
-
-#vendor-cal {
-	background-color: $primary;
-	color: $w;
-	padding: 20px 0px;
 }
 
 #vendor-links {

@@ -4,7 +4,19 @@
   transform: translateY(-50%);
 }
 
-@mixin medium-title {
+.medium-title {
 	font-size: 20px;
 	letter-spacing: 1px;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
 }

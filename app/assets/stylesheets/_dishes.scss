@@ -14,7 +14,7 @@ table.vendor-menu {
 		}
 		td {
 			vertical-align: middle;
-			@include medium-title;
+			@extend .medium-title;
 			border-top: 10px solid $lightgray;
 		}
 	}
